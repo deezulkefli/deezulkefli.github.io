@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>DEE & CO</title>
+        <div class="brand">
+            <h2>DEE & CO</h2>
+        </div>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="Shop.html">Store</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="Register.html">Register</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="About.html">About Us</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="Contact.html">Contact</a>
+                    </div>
+                </div>        
+            </div>
+        </div>
+        <div class="row2">
+            <div class="column">
+                <img src="malemodel.png" alt="Male">
+            </div>
+            <div class="column">
+                <img src="female.jpg" alt="Female" >
+            </div>
+            <div class="column">
+                <img src="kid2.jpg" alt="Kid">
+            </div>
+        </div>
+        <marquee behavior="scroll" direction="left">
+            <div class="marquee">
+            <p>The best of London Fashion Week autumn/winter 2020</p>
+        </div>
+        </marquee>
+         
+        <div class="video"> 
+            <div class="controls">
+            <button onclick="playPause()">Play/Pause</button> 
+            <button onclick="makeBig()">Big</button>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeNormal()">Normal</button>
+            <button onclick="setVolume()">Set volume</button>
+            <button onclick="returnVolume()">Return Volume</button>
+            </div><br><br>
+        <video id="video1" width="420">
+        <source src="runway.mp4" type="video/mp4">
+        <source src="runway.ogg" type="video/ogg">
+        </video>
+        </div> 
+          
+        <script> 
+            var myVideo = document.getElementById("video1");
+          
+            function playPause() { 
+            if (myVideo.paused) 
+                myVideo.play(); 
+            else 
+                myVideo.pause(); 
+            } 
+          
+            function makeBig() { 
+                myVideo.width = 650; 
+            } 
+          
+            function makeSmall() { 
+                myVideo.width = 320; 
+            } 
+          
+            function makeNormal() { 
+                myVideo.width = 420; 
+            } 
+
+            function setVolume(){
+                myVideo.volume = 0.3;
+            }
+
+            function returnVolume(){
+                alert(myVideo.volume);
+            }
+        </script><br><br><br>
+
+        <button onclick="topFunction()" id="BtnClick" title="Go to top">Top</button>
+        <script>
+            mybutton = document.getElementById("BtnClick");
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+
+                }
+            }
+            function topFunction() {
+            document.documentElement.scrollTop = 0; 
+            }
+
+        </script>
+    </body>
+</html>
+
+

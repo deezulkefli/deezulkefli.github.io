@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <div class="brand">
+            <h2>DEE & CO</h2>
+        </div>
+        <title>REGISTER</title>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <h4>Become a member and get 10% discount for your first purchase</h4><br>
+        <div class="fr-layer-item content">
+            <div class="box">
+                <form class="form_wrapper" method="POST" onsubmit="RegisterForm()">
+                    <h3 class="formHeading">CREATE ACCOUNT</h3>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="t1">Name</label><span>*</span>
+                        </div>
+                        <div class="col-75">
+                            <input id="t1" type= "text" name="t1" placeholder=" Initial Name"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25"> 
+                            <label for="t2">Surname</label><span>*</span>
+                        </div>
+                        <div class="col-75">
+                            <input id="t2" type= "text" name="t2" placeholder="Surname"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25"> 
+                            <label for="email">Email</label><span>*</span>
+                        </div>
+                        <div class="col-75">
+                            <input id="email" type= "text" name="email" placeholder="Email"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25"> 
+                            <label for="pwd">Password</label><span>*</span>
+                        </div>
+                        <div class="col-75">
+                            <input id="pwd" type="password" name="pwd" minlength="8" placeholder="Password"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25"> 
+                            <label for="birthday">Birthday:</label><span>*</span>
+                        </div>
+                        <div class="col-75">
+                            <input id="birthday" type="date" id="birthday" name="birthday" minlength="8" placeholder="dd/mm/yy"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="gender">Gender:</label><span style= "display: inline; float:none;"></span><br>
+                        </div>
+                        <div class="col-75">
+                            <input id="gender" type="radio" name="gender" value= "Male"> Male
+                            <input id="gender" type= "radio" name="gender" value= "Female"> Female
+                            <input id="gender" type= "radio" name="gender" value= "Prefer not to state"> Prefer Not To State
+                        </div><br>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="marital_status">Status</label><span>*</span>      
+                        </div>
+                        <div class="col-75">
+                            <select id="status" name="marital_status" class="form-control">
+                                <option value="select">Select option</option>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Divorced">Divorced</option>
+                                <option value="Widowed">Widowed</option>
+                            </select><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="checkbox">Membership Agreement</label><span>*</span>
+                        </div>
+                        <div class="col-75">
+                            <input id="agree" type="checkbox" name="agree">I agree to the DEE & CO's Terms of use and Privacy Policy
+                        </div><br><br>
+                    </div>
+                    <input id="submit" type="submit" onclick="submitForm()" value="Submit form">
+                </form>     
+            </div>
+        </div>
+        <script>
+            function RegisterForm(){
+            alert("Thanks! You are now a member. Enjoy discounts that have been sent through your email");
+            }
+        </script>
+    </body>
+</html>
